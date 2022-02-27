@@ -335,7 +335,7 @@ EOF
 
 PROJECT_NAME="wclear"
 OWNER=youtiaoguagua
-REPO="clear"
+REPO="wclear"
 BINARY=wclear
 FORMAT=tar.gz
 OS=$(uname_os)

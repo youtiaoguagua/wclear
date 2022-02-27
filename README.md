@@ -8,7 +8,7 @@ Then try wclear!
 
 Build with golang inspirited by [wipeclean](https://github.com/JeanJouliaCode/wipeClean).
 
-`curl -sSfL https://cdn.jsdelivr.net/gh/youtiaoguagua/clear@master/install.sh | sudo sh -s`
+`curl -sSfL https://cdn.jsdelivr.net/gh/youtiaoguagua/wclear@master/install.sh | sudo sh -s`
 
 ## Usage
 

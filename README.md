@@ -1,12 +1,14 @@
 # wclear
 
-Tired of the old and unintresting clear command?
-Do you want your error messages to be slowly wiped away?
+Is clear command too boring and not cool?
+
+Do you want to have a cooler way to clean up the console?
+
 Then try wclear! 
 
-This project inspirated by [wipeclean](https://github.com/JeanJouliaCode/wipeClean).
+Build with golang inspirited by [wipeclean](https://github.com/JeanJouliaCode/wipeClean).
 
-`sudo curl -sSfL https://cdn.jsdelivr.net/gh/youtiaoguagua/clear@master/install.sh | sh -s`
+`curl -sSfL https://cdn.jsdelivr.net/gh/youtiaoguagua/clear@master/install.sh | sudo sh -s`
 
 ## Usage
 
@@ -15,11 +17,11 @@ Run the animation:
 ```
 Usage of wclear:
   -d int
-        disappear time (default 10)
+        when to hide the line (default 10)
   -l int
-        line length (default 7)
+        the line length (default 7)
   -p int
-        line time default (default 4)
+        speed of the line (default 4)
 ```
 
 Config:
@@ -30,4 +32,4 @@ to run the program just wripe:
 
 `wclear`
 
-![wclear.gif](https://user-images.githubusercontent.com/30404329/155855194-5d6fbfbd-38db-434a-ac4e-2075eac470ea.gif)
+![wclear.gif](https://user-images.githubusercontent.com/30404329/155877625-6e8e603c-772d-4128-9a8d-99ac86222e12.gif)

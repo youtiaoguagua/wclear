@@ -37,9 +37,9 @@ func init() {
 }
 
 func main() {
-	flag.IntVar(&speed, "p", speed, "line time default")
-	flag.IntVar(&delay, "d", delay, "disappear time")
-	flag.IntVar(&length, "l", length, "line length")
+	flag.IntVar(&speed, "p", speed, "speed of the line")
+	flag.IntVar(&delay, "d", delay, "when to hide the line")
+	flag.IntVar(&length, "l", length, "the line length")
 	flag.Parse()
 
 	fmt.Print("\x1b[?25l")

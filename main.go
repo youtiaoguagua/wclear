@@ -22,8 +22,8 @@ var mutex sync.RWMutex
 var width int
 var height int
 var length = 7
-var speed = 3
-var delay = 12
+var speed = 4
+var delay = 20
 
 type Config struct {
 	Speed  int `json:"speed"`

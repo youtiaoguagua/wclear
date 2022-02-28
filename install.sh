@@ -55,7 +55,7 @@ execute() {
     if [ "$OS" = "windows" ]; then
       binexe="${binexe}.exe"
     fi
-    install "${srcdir}/${binexe}" "${BINDIR}/"
+    sudo install "${srcdir}/${binexe}" "${BINDIR}/"
     log_info "installed ${BINDIR}/${binexe}"
   done
   rm -rf "${tmpdir}"
@@ -238,10 +238,12 @@ http_download_curl() {
   local_file=$1
   source_url=$2
   header=$3
+  proxy="https://github.abskoop.workers.dev/"
+  log_debug "http_download_curl '${proxy}${source_url}'"
   if [ -z "$header" ]; then
-    code=$(curl -w '%{http_code}' -sL -o "$local_file" "$source_url")
+    code=$(curl -w '%{http_code}' -sL -o "$local_file" "$proxy$source_url")
   else
-    code=$(curl -w '%{http_code}' -sL -H "$header" -o "$local_file" "$source_url")
+    code=$(curl -w '%{http_code}' -sL -H "$header" -o "$local_file" "$proxy$source_url")
   fi
   if [ "$code" != "200" ]; then
     log_debug "http_download_curl received HTTP status $code"
@@ -253,10 +255,11 @@ http_download_wget() {
   local_file=$1
   source_url=$2
   header=$3
+  proxy="https://github.abskoop.workers.dev/"
   if [ -z "$header" ]; then
-    wget -q -O "$local_file" "$source_url"
+    wget -q -O "$local_file" "$proxy$source_url"
   else
-    wget -q --header "$header" -O "$local_file" "$source_url"
+    wget -q --header "$header" -O "$local_file" "$proxy$source_url"
   fi
 }
 http_download() {
